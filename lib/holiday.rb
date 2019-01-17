@@ -40,7 +40,6 @@ holiday_supplies[:winter].values.flatten
     holiday_supplies.each do |season, occation|
       occation.each do |holiday, supplies|
         if supplies.include?("BBQ")
-
           result << holiday
         end
       end
