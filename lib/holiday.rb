@@ -68,7 +68,6 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   collection = []
   holiday_hash.each do |season, season_details_hash|
-    puts season.to_s.capitalize! + ":"
     season_details_hash.each do |holiday, holiday_array|
        if holiday_array.include? "BBQ"
          collection << holiday
