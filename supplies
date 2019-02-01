@@ -1,0 +1,29 @@
+
+[1mFrom:[0m /home/JohnHayes7/apples-and-holidays-online-web-sp-000/lib/holiday.rb @ line 93 Object#all_supplies_in_holidays:
+
+     [1;34m76[0m: [32mdef[0m [1;34mall_supplies_in_holidays[0m(holiday_hash)
+     [1;34m77[0m:   [1;34m# iterate through holiday_hash and print items such that your readout resembles:[0m
+     [1;34m78[0m:   [1;34m# Winter:[0m
+     [1;34m79[0m:   [1;34m#   Christmas: Lights, Wreath[0m
+     [1;34m80[0m:   [1;34m#   New Years: Party Hats[0m
+     [1;34m81[0m:   [1;34m# Summer:[0m
+     [1;34m82[0m:   [1;34m#   Fourth Of July: Fireworks, BBQ[0m
+     [1;34m83[0m:   [1;34m# etc.[0m
+     [1;34m84[0m: 
+     [1;34m85[0m:   holiday_hash.each [32mdo[0m |season, holiday|
+     [1;34m86[0m:     puts [31m[1;31m"[0m[31m#{season.capitalize}[0m[31m:[1;31m"[0m[31m[0m
+     [1;34m87[0m: 
+     [1;34m88[0m:     holiday.each [32mdo[0m |supplies|
+     [1;34m89[0m:       holiday_array = holiday.keys
+     [1;34m90[0m:       
+     [1;34m91[0m:       i = [1;34m0[0m
+     [1;34m92[0m:       [32muntil[0m i > holiday_array.length
+ =>  [1;34m93[0m:       binding.pry
+     [1;34m94[0m:       puts [31m[1;31m"[0m[31m  #{holiday_array[i].to_s.capitalize}[0m[31m: [1;31m"[0m[31m[0m
+     [1;34m95[0m:       
+     [1;34m96[0m:       i += [1;34m1[0m
+     [1;34m97[0m:       [32mend[0m
+     [1;34m98[0m:     [32mend[0m
+     [1;34m99[0m:   [32mend[0m
+    [1;34m100[0m: [32mend[0m
+
