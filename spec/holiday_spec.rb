@@ -107,7 +107,7 @@ describe "holiday_supplies_hash" do
     # requirement is that you use the same word to end the multi-line string.
 
     # For more info about heredocs, see this link: http://en.wikibooks.org/wiki/Ruby_Programming/Here_documents
-binding.pry
+
       @output = <<-TEXT
 Winter:
   Christmas: Lights, Wreath

@@ -73,16 +73,18 @@ def all_supplies_in_holidays(holiday_hash)
 
       if holiday_arr.length > 1
         holiday_arr.each do |word|
-          holiday_cap = holiday_cap.strip + "#{word.capitalize!}"
+  #        binding.pry
+          holiday_cap = holiday_cap + " #{word.capitalize!}"
         end
       else
         holiday_arr.each do |word|
-          holiday_cap = "#{word.capitalize!}"
+          holiday_cap = " #{word.capitalize!}"
         end
 
-        puts "#{holiday_cap}: #{supplies.join(", ")}"
+
 
       end
+      puts " #{holiday_cap}: #{supplies.join(", ")}"
     end
   end
 end
