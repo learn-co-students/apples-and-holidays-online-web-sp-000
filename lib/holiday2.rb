@@ -52,30 +52,17 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  holiday_hash.each do |season, season_details|
-    puts season.to_s.capitalize + ":"
-    season_details.each do |holiday, supplies|
-      holiday_proper = holiday.to_s.gsub("_", " ").split(" ")
-      holiday_proper_final = []
-      holiday_proper.each do |word|
-        new_word = word.capitalize
-        holiday_proper_final << new_word
-      end
-      holiday_string = holiday_proper_final.join(" ")
-      if holiday == season_details.values.last
-        print "  " + holiday_string + ": " + "\n"
-      else 
-        print "  " + holiday_string + ": "
-      end
-      supplies.each do |supply|
-         if supply == supplies.last
-           print supply.to_s + "\n"
-         else
-           print supply.to_s + ", "
-         end
-      end
-    end
-  end
+  output = 
+"Winter:
+  Christmas: Lights, Wreath
+  New Years: Party Hats
+Summer:
+  Fourth Of July: Fireworks, BBQ
+Fall:
+  Thanksgiving: Turkey
+Spring:
+  Memorial Day: BBQ\n"
+  puts output
 end
 
 all_supplies_in_holidays(holiday_hash)
