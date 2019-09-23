@@ -57,35 +57,32 @@ end
 def all_supplies_in_holidays(holiday_hash)
    holiday_hash.each do |season, holiday_details|
      puts season.to_s.capitalize! + ":"
-   holiday_details.each do |holiday, data| #iterates through holidays and values
-     holiday.to_s.split.each do |holidays| #turns holiday into string, splits it, iterates over it
-     holidays.capitalize! #capitalizes each word in holidays
-     puts "  " + holidays.join + ": " + data.join(", ") #puts string with rejoined capitalized holiday strings, :, data 
-end
-end
-
-
+   holiday_details.each do |holiday, data|
+     puts "  #{holiday.to_s.split("_").map{|h| h.capitalize}.join(" ")}: " + data.join(", ")
      
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
-
+     #split_holiday = holiday.to_s.split
+     #split_holiday.each do |holidays| 
+     #  holidays.each do |caps_holiday|
+      #   multi_word = caps_holiday.capitalize!.join
+       #  puts "  " + multi_word + ": " + data.join(", ")
+      #else 
+       # puts "  " + holidays.capitalize! + ": " + data.join(", ")
+end
 end
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  holiday_hash.each do |season, holiday_details|
-    holiday_details.each do |holiday, data|
-      if data.include? "BBQ"
-         return [holiday]
+  holiday_hash.map do |season, holiday_details|
+    
+    holiday_details.map do |holiday, data|
+     holiday if data.include?("BBQ")
+         
+         #map
+
 end
-end
-end
+#flatten gets rid of nils
+#compact gets rid of multiple arrays
+end.flatten.compact
 end
 
 
