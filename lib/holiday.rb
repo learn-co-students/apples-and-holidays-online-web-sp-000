@@ -22,7 +22,6 @@ def second_supply_for_fourth_of_july(holiday_hash)
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
- 
   holiday_hash.each do |season, holiday_details|
     if season == :winter
       holiday_details.collect do |attribute, data|
@@ -59,8 +58,10 @@ def all_supplies_in_holidays(holiday_hash)
    holiday_hash.each do |season, holiday_details|
      puts season.to_s.capitalize! + ":"
    holiday_details.each do |holiday, data|
-     puts "  " + holiday.to_s.capitalize! + ": " + data.join(", ")
-     
+     holiday.to_s.split.each do |holidays|
+        new_value= holidays.capitalize!
+     puts "  " + new_value + ": " + data.join(", ")
+end
 end
 
 
@@ -78,9 +79,13 @@ end
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
-
+  holiday_hash.each do |season, holiday_details|
+    holiday_details.each do |holiday, data|
+      if data.include? "BBQ"
+         return [holiday]
+end
+end
+end
 end
 
 
