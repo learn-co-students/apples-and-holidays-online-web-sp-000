@@ -39,7 +39,7 @@ def add_supply_to_winter_holidays(supplies_hash, supply)
   #     :memorial_day => ["BBQ"]
   #   }
   # }
- holiday_hash[:winter].each {|k, v| holiday_hash[:winter][k] << supply }
+ supplies_hash[:winter].each {|k, v| supplies_hash[:winter][k] << supply }
 end
 
 
@@ -84,9 +84,9 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   #   }
   # }
   # code here
-  holiday_supplies[season][new_holiday_name] = supplies_list
+  holiday_hash[season][holiday_name] = []
   # remember to return the updated hash
-supplies_hash
+holiday_hash
 end
 
 def all_winter_holiday_supplies(holiday_hash)
