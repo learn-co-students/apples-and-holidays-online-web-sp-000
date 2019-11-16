@@ -111,25 +111,25 @@ def all_supplies_in_holidays(holiday_hash)
    puts "#{season_string}:"
 
    holiday.each do |name, items|
-     names_s = name.to_s
+     names_string = name.to_s
      #names_s[0] = names_s[0].capitalize
-     names_s_array = names_s.split("_")
+     names_string_array = names_string.split("_")
 
-     names_s_array.collect do |value|
+     names_string_array.collect do |value|
        value[0] = value[0].capitalize
      end
 
-     names_s = names_s_array.join(" ")
+     names_string = names_string_array.join(" ")
 
-     item_s = ""
+     item_string = ""
      items.each_with_index do |item, index|
        if index == (items.length - 1)
-         item_s += "#{item}"
+         item_string += "#{item}"
        else
-         item_s += "#{item}, "
+         item_string += "#{item}, "
        end
      end
-     puts "  #{names_s}: #{item_s}"
+     puts "  #{names_string}: #{item_string}"
    end
  end
 
