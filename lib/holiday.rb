@@ -72,16 +72,11 @@ def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
 
 holiday_hash.each do |key, value|
+
  puts key.to_s.capitalize! + ":"
  value.each do |holiday, supplies| 
-   puts holiday.to_s.capitalize! + ":"
-  puts supplies.to_s.capitalize! 
-  
-  #I think I also should shovel these supplies ^ into a supply_array maybe so then I can iterate over the array and make sure all the words are capitalized?
-
-  
-    
-  
+   puts "  " + "#{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(', ')}"
+   
 
 end
 end
@@ -90,7 +85,17 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-
+  
+  holidays_with_bbq = []
+  
+  holiday_hash.each do |season, holiday_info| 
+     holiday_info.each do |holiday, supplies| 
+       if supplies.any? {|supply| supply == "BBQ"} 
+         holidays_with_bbq << holiday
+       end
+     end
+   end
+     holidays_with_bbq
 end
 
 
