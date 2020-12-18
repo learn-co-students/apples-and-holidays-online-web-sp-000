@@ -50,6 +50,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   
 end
 
+
 #why are we not having to use the << 
 # Because we're setting the value of the holiday_name key to a pre-written array
 # We're not adding to an array
@@ -58,24 +59,17 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season 
-  holiday_hash.each do |season|
-    if season == "winter"
-       winter.each do |holiday, holiday_supplies|
-        holiday_supplies.each do |supplies|
-          supply << supplies
-         puts supply
-      end
-    end 
+  holiday_hash[:winter].map do |holiday, supplies|
+    supplies 
+    end.flatten
   end 
-end 
-end 
-      
+    
    
-def all_supplies_in_holidays(holiday_hash) 
-  iterate through holiday_hash and print items such that your readout resembles 
+def all_supplies_in_holidays(holiday_hash)
+  iterate through holiday_hash and print items such that your readout resembles
   # Winter: 
   #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
+  #   New Years: Party Hats 
   # Summer:
   #   Fourth Of July: Fireworks, BBQ 
   # etc.
