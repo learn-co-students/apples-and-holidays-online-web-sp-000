@@ -58,7 +58,9 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season 
-end
+  
+  holiday_hash[:season] = "winter"
+  
  
 #def all_supplies_in_holidays(holiday_hash) 
   # iterate through holiday_hash and print items such that your readout resembles 
@@ -66,7 +68,7 @@ end
   #   Christmas: Lights, Wreath
   #   New Years: Party Hats
   # Summer:
-  #   Fourth Of July: Fireworks, BBQ
+  #   Fourth Of July: Fireworks, BBQ 
   # etc.
 #end 
 
