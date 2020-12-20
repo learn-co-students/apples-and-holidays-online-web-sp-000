@@ -45,33 +45,54 @@ supplies << supply
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season][holiday_name] = supply_array
-
+  
+ # remember to return the updated hash
   holiday_hash
-  
 end
-
-
-#why are we not having to use the << 
-# Because we're setting the value of the holiday_name key to a pre-written array
-# We're not adding to an array
-  
-  # remember to return the updated hash 
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season 
   holiday_hash[:winter].map do |holiday, supplies|
-    supplies 
-    end.flatten
+    supplies
+ end.flatten
   end 
     
    
 def all_supplies_in_holidays(holiday_hash)
-  iterate through holiday_hash and print items such that your readout resembles
+  #iterate through holiday_hash and print items such that your readout resembles
   # Winter: 
   #   Christmas: Lights, Wreath
   #   New Years: Party Hats 
   # Summer:
   #   Fourth Of July: Fireworks, BBQ 
   # etc.
+  
+  holiday_hash.map do |seasons, holiday| 
+    puts "#{seasons.capitalize}:"
+    holiday.map do |holiday, supply|
+      supplies = ""
+      supply.map do |details|
+        supplies << details
+      
+      end  
+        
+      #supplies is an array, change to string then split, capitlize and join
+      puts "#{holiday.to_s.capitalize}:" 
+     
+   
+  
+  #symbol
+  
+#{:christmas=>["Lights", "Wreath"], :new_years=>["Party Hats"]} 
+  
+ end 
 end 
-
+end
+ 
+# contacts.each do |person, data|
+#   puts "#{person}: #{data}"
+ 
+ 
+ # Question 7
+  # Write a method to collect all holidays with BBQ 
+  #describe "#all_holidays_with_bbq" do
