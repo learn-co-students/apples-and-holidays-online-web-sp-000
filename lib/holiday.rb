@@ -19,7 +19,7 @@ def second_supply_for_fourth_of_july(holiday_supplies_hash)
   }
   # return the second element in the 4th of July array
 
-  holiday_supplies[:summer][:fourth_of_july][1] 
+  holiday_supplies[:summer][:fourth_of_july][1]
 end 
 
 
@@ -68,28 +68,34 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.map do |seasons, holiday| 
-    puts "#{seasons.capitalize}:"
-    holiday.map do |holiday, supply|
-      supplies = ""
-      supply.map do |details|
-        supplies << "#{details}, "
-      end  
-        
-     puts "#{ holiday.to_s.capitalize}: #{supplies}"
-  end 
-end 
-end
- 
+    season ="#{seasons.capitalize}:"
+    puts season 
+    holiday.each do |holiday, supply|
+puts "#{holiday.to_s.split('_').map{|word| word.capitalize}}"
+  end
+ end 
+ end 
 
+
+
+ # Question 7
   # Write a method to collect all holidays with BBQ 
   #describe "#all_holidays_with_bbq" 
   
-  def all_holidays_with_bbq(holidays)
-    holidays.map do |holiday, supply|
-      if supply == "BBQ"
-        puts"#{:holiday}, #{:supply}"
-      end 
-    end 
-  end 
-        
-        
+  
+  def all_holidays_with_bbq(holiday_supplies)
+  #   holiday_supplies.map do |season, holiday|
+  #   holiday.map do |holiday, supply|
+  #       #return "#{:holiday}, #{:supply}"
+  #       #return holiday, supply
+  
+  #     end 
+  #   end
+  # end
+
+   #holiday_supplies.values 
+#         if supply == "BBQ"
+#           puts holiday_supplies.values 
+           
+# end 
+end
