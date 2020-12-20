@@ -72,27 +72,24 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.map do |holiday, supply|
       supplies = ""
       supply.map do |details|
-        supplies << details
-      
+        supplies << "#{details}, "
       end  
         
-      #supplies is an array, change to string then split, capitlize and join
-      puts "#{holiday.to_s.capitalize}:" 
-     
-   
-  
-  #symbol
-  
-#{:christmas=>["Lights", "Wreath"], :new_years=>["Party Hats"]} 
-  
- end 
+     puts "#{ holiday.to_s.capitalize}: #{supplies}"
+  end 
 end 
 end
  
-# contacts.each do |person, data|
-#   puts "#{person}: #{data}"
- 
- 
- # Question 7
+
   # Write a method to collect all holidays with BBQ 
-  #describe "#all_holidays_with_bbq" do
+  #describe "#all_holidays_with_bbq" 
+  
+  def all_holidays_with_bbq(holidays)
+    holidays.map do |holiday, supply|
+      if supply == "BBQ"
+        puts"#{:holiday}, #{:supply}"
+      end 
+    end 
+  end 
+        
+        
