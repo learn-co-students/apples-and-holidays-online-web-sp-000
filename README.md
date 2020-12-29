@@ -1,3 +1,29 @@
+
+holiday_supplies[:season]= :holiday_name
+holiday_supplies[:season][:holiday_name
+
+holiday_supplies[:season]= {:holiday_name => supply_array}
+
+
+holiday_hash = {
+  :winter => {
+    :christmas => ["Lights", "Wreath"],
+    :new_years => ["Party Hats"]
+  },
+  :summer => {
+    :fourth_of_july => ["Fireworks", "BBQ"]
+  },
+  :fall => {
+    :thanksgiving => ["Turkey"]
+  },
+  :spring => {
+    :memorial_day => ["BBQ"]
+  }
+}
+
+
+
+
 # Iterating Over Hashes
 
 ## Objectives
