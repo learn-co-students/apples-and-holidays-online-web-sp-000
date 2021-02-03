@@ -1,0 +1,18 @@
+
+[1mFrom:[0m /home/drakesonozaki/code/labs/apples-and-holidays-online-web-sp-000/lib/holiday.rb @ line 46 Object#add_supply_to_memorial_day:
+
+    [1;34m37[0m: [32mdef[0m [1;34madd_supply_to_memorial_day[0m(holiday_hash, supply)
+    [1;34m38[0m:   [1;34m# again, holiday_hash is the same as the ones above[0m
+    [1;34m39[0m:   [1;34m# add the second argument to the memorial day array[0m
+    [1;34m40[0m:   holiday_hash.each [32mdo[0m |season, holiday|
+    [1;34m41[0m:     [32mif[0m season == [33m:spring[0m
+    [1;34m42[0m:       holiday.each [32mdo[0m|date, stuff|
+    [1;34m43[0m:         stuff << supply
+    [1;34m44[0m:         stuff << [31m[1;31m"[0m[31mBurgers[1;31m"[0m[31m[0m
+    [1;34m45[0m:         stuff
+ => [1;34m46[0m:   binding.pry 
+    [1;34m47[0m:       [32mend[0m 
+    [1;34m48[0m:     [32mend[0m
+    [1;34m49[0m:     [32mend[0m  
+    [1;34m50[0m: [32mend[0m
+
