@@ -1,0 +1,32 @@
+hash = {
+      :winter => {
+        :christmas => ["Lights", "Wreath"],
+        :new_years => ["Party Hats"]
+      },
+      :summer => {
+        :fourth_of_july => ["Fireworks", "BBQ"]
+      },
+      :fall => {
+        :thanksgiving => ["Turkey"]
+      },
+      :spring => {
+        :memorial_day => ["BBQ"]
+      }
+    }
+
+def hol_hash(hash)
+  barbi = []
+  hash.each do |season, holiday|
+    holiday.each do |holiday, supplies|
+      supplies.each do |supply|
+      if supply == "BBQ"
+      barbi << holiday
+    end
+  end
+end
+end
+barbi
+end
+    
+
+
