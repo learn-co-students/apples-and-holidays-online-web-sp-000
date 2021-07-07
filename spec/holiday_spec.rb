@@ -20,6 +20,7 @@ describe "holiday_supplies_hash" do
 
  # Question 1
  # Write a method that returns the second supply for the Fourth of July
+holiday_supplies_hash[:summer][:fourth_of_july][1]
   describe "#second_supply_for_fourth_of_july" do
     it "returns the string 'BBQ' without hardcoding it" do
       expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("BBQ")
@@ -30,6 +31,8 @@ describe "holiday_supplies_hash" do
 
   # Question 2
   # Write a method that adds a supply to all Winter holidays
+  holiday_supplies_hash.each do |season|
+
   describe "#add_supply_to_winter_holidays" do
     it "iterates through winter holidays adds a supply to each one" do
       add_supply_to_winter_holidays(holiday_supplies, "Balloons")
@@ -37,6 +40,9 @@ describe "holiday_supplies_hash" do
       expect(holiday_supplies[:winter][:new_years]).to include("Balloons")
     end
   end
+  holiday_supplies_hash[:winter][:christmas] << Balloons
+  holiday_supplies_hash[:winter][:new_years] << Balloons
+
 
   # Question 3
   # Write a method that adds a supply to Memorial Day
@@ -53,6 +59,14 @@ describe "holiday_supplies_hash" do
       add_supply_to_memorial_day(holiday_supplies, "Table Cloth")
       expect(memorial_day_supplies).to include("Table Cloth")
       expect(memorial_day_supplies).not_to include("Grill")
+    end
+  end
+  def add_supply_to_memorial_day(holiday_hash, supply)
+  holiday_supplies_hash.each do |seasons, holiday_deatils_hash|
+    holiday_deatils_hash.each do |attribute, data|
+      if attribute == :memorial_day
+        data << supply
+      end
     end
   end
 
@@ -78,6 +92,10 @@ describe "holiday_supplies_hash" do
       expect(holiday_supplies[:winter][:valentines_day]).to match_array(valentines_day_supplies)
     end
   end
+  def add_new_holiday_with_supplies(holiday_hash, supply_array, season, holiday_name)
+  holiday_hash[season][holiday_name] = supply_array
+  holiday_hash
+ end
 
   # Question 5
   # Write a method to collect all Winter supplies from all the winter holidays
